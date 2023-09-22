@@ -1,0 +1,8 @@
+numpy==1.24.4
+numpy==1.17.4
+Pillow==10.0.0
+Pillow==7.0.0
+Pillow==10.0.1
+rospy==1.16.0
+scipy==1.11.2
+tf==1.13.2

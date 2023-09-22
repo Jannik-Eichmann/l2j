@@ -1,0 +1,15 @@
+<launch>
+    <!-- Publisher Nodes -->
+    <!-- <node name="camera_node" pkg="l2j" type="camera_node.py" output="screen"/> -->
+    <node name="robot_monitor_node" pkg="l2j" type="robot_monitor_node.py" output="screen"/>
+
+    <!-- Service Nodes -->
+    <node name="matrix_calculator_node" pkg="l2j" type="matrix_calculator_node.py" output="screen"/>
+
+    <!-- Control Nodes -->
+    <node name="robot_control_node" pkg="l2j" type="robot_control_node.py" output="screen"/>
+    <node name="calibration_control_node" pkg="l2j" type="calibration_control_node.py" output="screen"/>
+
+    <!-- rQt GUI Node -->
+    <!-- <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/> -->
+</launch>

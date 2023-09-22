@@ -1,0 +1,5 @@
+# request movement to target position
+bool please_move
+---
+# response with true, if point is reached
+bool success

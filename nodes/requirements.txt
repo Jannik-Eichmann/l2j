@@ -1,0 +1,9 @@
+message_filters==1.16.0
+numpy==1.24.4
+numpy==1.17.4
+pyrealsense2==2.54.1.5217
+rosbag==1.16.0
+rospy==1.16.0
+scipy==1.11.2
+sensor_msgs==1.13.1
+tf==1.13.2

@@ -1,0 +1,10 @@
+# request the matrix calculation by providing aruco data and robot data
+l2j/ArUcoData aruco_data
+l2j/RobotData robot_data
+---
+# transmit success or failure of matrix calculation
+bool success
+# ! changed from Transform to Vector3 to prevent hickups during conversion to quaternions
+# response with the translation and rotation vectors from image coordinates to robot coordinates
+geometry_msgs/Vector3 translation
+geometry_msgs/Vector3 rotation
