@@ -427,9 +427,6 @@ class GuiRobotApp:
         self.rot_z.set(round(rot_euler[2], 4))
 
         self.upload_to_tf_btn.configure(state=ACTIVE)
-        messagebox.showinfo(
-            title="Kalibration beendet.", message="Der Kalibationsprozess ist beendet."
-        )
 
     def get_camera_data(self, data):
         self.cur_x_pos.set(round(data.x, 4))
