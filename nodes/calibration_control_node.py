@@ -147,13 +147,7 @@ class CalibrationControl(Node):
         cam_trans = -np.matrix(rotation_matrix).T * np.matrix(camera_translation)
         cam_trans = Vector3(cam_trans[0], cam_trans[1], cam_trans[2])
 
-        transposed_rot_mat = np.matrix(rotation_matrix).T
-        cam_rot = (
-            math.atan2(-transposed_rot_mat[2, 1], transposed_rot_mat[2, 2]),
-            math.asin(transposed_rot_mat[2, 0]),
-            math.atan2(-transposed_rot_mat[1, 0], transposed_rot_mat[0, 0]),
-        )
-        cam_rot = Vector3(cam_rot[0], cam_rot[1], cam_rot[2])
+        cam_rot = Vector3(camera_rotation[0], camera_rotation[1], camera_rotation[2])
         return cam_trans, cam_rot
 
     def publish_tm(self):

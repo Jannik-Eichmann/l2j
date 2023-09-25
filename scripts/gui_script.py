@@ -50,7 +50,7 @@ class GuiRobotApp:
         self.imageType = 2
 
         self.mainLevel = tk.Tk() if master is None else tk.Toplevel(master)
-        self.mainLevel.title("LuLuJa Kamerakalibrationsprogramm")
+        self.mainLevel.title("l2j Kalibrationshilfe")
         screen_width = self.mainLevel.winfo_screenwidth()
         screen_height = self.mainLevel.winfo_screenheight()
         self.mainLevel.resizable(False, False)
@@ -96,7 +96,7 @@ class GuiRobotApp:
             state="disabled",
             width=50,
         )
-        _text_ = "1.Starten Sie den Roboter über das Teach-Panel\n2.Stellen Sie sicher, dass der ArUco Marker im Sichtfeld der Kamera ist.\n3.Starten Sie den Roboter.\n4.Starten Sie das Script 'external control' \nauf dem Teach-Panel.\n5.Starten Sie RViz und warten Sie bis \nMoveIt geladen ist.\n6.Starten Sie die Kalibrierung.\n7.Warten Sie bis die Transformations-\nmatrix ausgeben wird."
+        _text_ = "1.Starten Sie den Roboter über das Teach-Panel.\n2.Stellen Sie sicher, dass der ArUco Marker im Sichtfeld der Kamera ist.\n3.Starten Sie den Roboter.\n4.Starten Sie das Script 'external control' \nauf dem Teach-Panel.\n5.Starten Sie RViz und warten Sie bis \nMoveIt bereit ist.\n6.Starten Sie die Kalibrierung.\n7.Warten Sie, bis die Transformations-\nmatrix ausgeben wird."
         self.manual_txt.configure(state="normal")
         self.manual_txt.insert("0.0", _text_)
         self.manual_txt.configure(state="disabled")
@@ -521,7 +521,7 @@ class MenuApp:
         # window to chose to load matrix or to open the callibration window.
         self.menu_window = tk.Tk() if master is None else tk.Toplevel(master)
         self.menu_window.geometry("500x400")
-        self.menu_window.title("LuLuJa Startmenü")
+        self.menu_window.title("l2j Startmenü")
         self.menu_window.resizable(False, False)
         self.main_Frame = ttk.Frame(self.menu_window)
 
@@ -541,7 +541,7 @@ class MenuApp:
 
         self.load_config_prog_btn = ttk.Button(self.main_Frame)
         self.load_config_prog_btn.configure(
-            text="Starte Kalibrationsprogramm", command=self.start_callibration_prog
+            text="Starte Kalibrationshilfe", command=self.start_callibration_prog
         )
         self.load_config_prog_btn.place(anchor="center", relx=0.5, rely=0.38)
 

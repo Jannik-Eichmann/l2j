@@ -71,7 +71,7 @@ class TransMatBroadcaster:
         # publish the transformation matrix from the read file
         while not rp.is_shutdown():
             br.sendTransform(
-                trans_base2camera, rot_base2camera, rp.Time.now(), "camera", "world"
+                trans_base2camera, rot_base2camera, rp.Time.now(), "camera", "base_link"
             )
             rp.loginfo("sending transform /world => /camera")
             rate.sleep()
